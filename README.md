@@ -1,6 +1,14 @@
 # RecurrentParametrizer
 Use RNN-like structure (Transformer could work here too) to parametrize a potentially infinite-width one-layer neural network
 
+For classification: 
+parametrizer outputs weight values (iteratively for RNN, still working on how to penalize for size... maybe just a lambda in loss that tries to make the network compact?), results in tiny network. 
+
+Train network on data (single data point? mini-batch? I'm thinking single data point) so that weights are now optimized. 
+
+Compute MSE between predicted weights and optimized weights, backprop
+
+
 
 
 Actually, further idea: using a network to parametrize another network. What should be the structure of the target network? 
